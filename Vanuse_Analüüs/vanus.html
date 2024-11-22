@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanuse kontroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Pane oma vanus</h1>
+    <form>
+        <label for="age"> Sinu vanus</label>
+        <input type="text" id="age" placeholder="Vanus" required>
+        <input type="submit" value="submit" onclick="
+            event.preventDefault();
+            kontrolliVanust();
+        ">
+    </form>
+    <div id="message"></div>
+    <script src="vanusekontroll.js"></script>
+</body>
+</html>

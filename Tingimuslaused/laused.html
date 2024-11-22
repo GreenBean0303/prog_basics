@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Agnes Tiit"> 
+    <title>Tingimuslaused</title>
+</head>
+<body>
+    
+<form id="form">
+    <label for="age">Sisesta oma vanus</label>
+    <input type="number" name="vanus" id="age" required><br><br>
+
+    <label for="fruit">Sisesta lemmikvili</label>
+    <input type="text" name="lemmikvili" id="fruit" required>
+
+    <button type="button" onclick="checkUserInfo()">Saada</button>
+</form>
+
+<h2>Vastus:</h2>
+<div id="result"></div>
+<script src="laused.js"></script>
+</body>
+</html>
