@@ -1,6 +1,8 @@
-import {Product} from "./constructor/Product"
-import {Cart} from "./constructor/Cart"
-import { displayProductsView } from "./views/allProductsView";
+import { Product } from "./constructor/Product.js";
+import { Cart } from "./constructor/Cart.js";
+import { displayProductsView } from "./views/allProductsView.js";
+import { displayFavouritesView } from "./views/favouritesView.js";
+import { displayCartView } from "./views/cartView.js";
 
 const products = [
     new Product(1, "Sülearvuti", 999.99, "Elektroonika"),
@@ -8,15 +10,21 @@ const products = [
     new Product(3, "Tahvelarvuti", 299.99, "Elektroonika"),
 ];
 
-//Toote kuvamine
+const cart = new Cart();
+const favourites = [];
 
-function displayProducts() {
-    const productsContainer = document.getElementById("Products")
-    products.forEach(product => {
-        productcard = document.createElement("div")
+function initApp() {
+    
+    const favouritesButton = document.getElementById("favourites-button");
+    favouritesButton.onclick = () => displayFavouritesView(favourites);
 
-        const productTitle = document.createElement("h3");
-        productTitle.textContent = product.name;
-        productCard.append(productTitle)
-    });
+    const cartButton = document.getElementById("cart-button");
+    cartButton.onclick = () => displayCartView(cart);
+
+    displayProductsView(products, cart, favourites);
 }
+
+document.addEventListener("DOMContentLoaded", initApp);
+
+
+ 

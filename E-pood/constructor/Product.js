@@ -6,7 +6,7 @@ export class Product {
         this.category = category;
     }
     describe() {
-        return `Title:${this.name}, Price:${this.price}, Category:${this.category};`
+        return `Product: ${this.name}, Price: ${this.price}, Category: ${this.category}`;
     }
     static discoutedPrice (price, discount) {
         return price - (price*discount) / 100;

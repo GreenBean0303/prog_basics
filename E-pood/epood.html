@@ -3,18 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>E-Pood</title>
+    <style>
+        
+    </style>
 </head>
 <body>
-    <h1 id="h1">E-Pood for you</h1>
 
-    <div class="clothes">Riided</div>
-    <div class="tech">Tehnoloogia</div>
-    <div class="accessories">Ehted</div>
+    <header class="header">
+        <a href="/E-pood/">
+            <h1 id="h1">E-Pood for You</h1>
+        </a>
 
-    <h4 id="h3"></h4>
+        <nav id="categories">
+            <div class="clothes">Riided</div>
+            <div class="tech">Tehnoloogia</div>
+            <div class="accessories">Ehted</div>
+        </nav>
+
+        
+        <div id="nav-buttons">
+            <button id="favourites-button">Lemmikud</button>
+            <button id="cart-button">Ostukorv (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <main id="app"></main>
+
+  
+    <footer class="footer">
+        <p>&copy; 2024 E-Pood. Kõik õigused kaitstud.</p>
+    </footer>
+
+    
     <script src="dom.js" type="module"></script>
-    <script src="epood.js"></script>
-    <script src="main.js"></script>
+    <script src="epood.js" type="module"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>

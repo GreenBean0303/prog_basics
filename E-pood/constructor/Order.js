@@ -1,7 +1,8 @@
 export class Order {
     constructor(cart) {
       this.orderDate = new Date();
-      this.cart = cart;
+      this.items = [...cart.items];
+      this.total = cart.calculateTotal();
     }
   
     printOrder() {
