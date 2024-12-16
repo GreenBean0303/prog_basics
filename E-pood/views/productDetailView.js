@@ -1,4 +1,7 @@
-export const displayProductsDetailView = (product, cart, favourites) => {
+import { getProductById } from "../api.js";
+
+export const displayProductsDetailView = async (productId) => {
+    const product = await getProductById(productId);
     const container = document.createElement("app");
 
     if(!container) {

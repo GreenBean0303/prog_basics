@@ -25,3 +25,4 @@ export class Customer {
       });
     }
   }
+  export const customer = new Customer("Agnes")

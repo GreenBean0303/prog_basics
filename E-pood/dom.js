@@ -1,6 +1,6 @@
 
 document.title = "E_Shop";
-const firstHeading = document.getElementById("h1");
+const firstHeading = document.getElementById("home-button");
 if (firstHeading) {
     firstHeading.style.color = "white";
     firstHeading.style.backgroundColor = "black";

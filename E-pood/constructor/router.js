@@ -6,7 +6,7 @@ import { displayProductDetailView } from './views/productDetailView.js';
 export const navigate = (view, data) => {
     switch (view) {
         case 'products':
-            displayProductsView();
+            displayProductsView(data);
             break;
         case 'cart':
             displayCartView(data);

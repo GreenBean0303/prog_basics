@@ -1,6 +1,8 @@
+import { updateCartCount } from "./mainMenu.js";
+
 export const displayCartView = (cart) => {
     const container = document.getElementById("app");
-    container.innerHTML = ""; // Clear existing content
+    container.innerHTML = "";
 
     if (cart.items.length === 0) {
         container.innerHTML = "<p>Your cart is empty.</p>";
@@ -32,8 +34,10 @@ export const displayCartView = (cart) => {
             displayCartView(cart);
         };
 
+        
         cartItem.querySelector(".remove-item").onclick = () => {
             cart.removeProduct(item.product.id);
+            updateCartCount(cart);
             displayCartView(cart);
         };
 
